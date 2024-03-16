@@ -23,9 +23,10 @@ test("モック関数は関数の中でも実行できる", () => {
   const mockFn = jest.fn();
   function greet() {
     mockFn();
+    mockFn();
   }
   greet();
-  expect(mockFn).toHaveBeenCalledTimes(1);
+  expect(mockFn).toHaveBeenCalledTimes(2);
 });
 
 test("モック関数は実行時の引数を記録している", () => {

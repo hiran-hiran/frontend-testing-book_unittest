@@ -35,6 +35,8 @@ function inputFactory(input?: Partial<ArticleInput>) {
 }
 
 test("バリデーションに成功した場合、成功レスポンスが返る", async () => {
+  expect.assertions(2);
+
   // バリデーションに通過する入力値を用意
   const input = inputFactory();
   // 入力値を含んだ成功レスポンスが返るよう、モックを施す
